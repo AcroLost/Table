@@ -1,0 +1,10 @@
+.user {
+  display: grid;
+  grid-template-columns: 10% 20% 20% 40% 10%;
+  margin-top: 7px;
+  padding: 3px;
+  align-items: center;
+  
+  border-radius: 5px;
+  background-color: white;
+}

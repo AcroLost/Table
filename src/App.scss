@@ -1,0 +1,133 @@
+// COMMON STYLES
+.photo {
+  height: 50px;
+}
+
+.favourite {
+  width: 20px;
+  height: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.link {
+  padding: 4px 0;
+  display: inline-block;
+  text-align: center;
+
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: white;
+  border: 1px solid rgb(185, 176, 176);
+  color: black;
+
+  &.activeLink {
+    background-color: rgb(233, 224, 224);
+  }
+
+  &:hover {
+    background: rgb(205, 196, 243);
+  }
+}
+//---------------------------------------------------------------------------
+
+.main {
+  display: grid;
+  grid-template-columns: 750px;
+  justify-content: center;
+
+  &__wrapper {  
+    position: relative;
+    padding: 20px;
+
+    border-radius: 5px;
+    background-color: rgb(238, 230, 230);
+
+    select {
+      width: 45px;
+      position: absolute; 
+      right: 20px
+    }
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-column-gap: 50px;
+    margin-bottom: 10px;
+  }
+  
+  &__content {
+    max-width: 711px;
+  }
+}
+
+@media (max-width: 790px) {
+
+  .main {
+    grid-template-columns: 650px;
+
+    &__header {
+      grid-template-columns: 50% 40%;
+      justify-items: center;
+      text-align: center;
+  
+  
+      .filter__wrapper {
+        display: block;
+      
+        input {
+          margin-top: 5px;
+        }
+      }
+    }
+    &__content {
+      .preview {
+        grid-template-columns: 1fr;
+
+        &__right {
+          video {
+            width: 100%;   
+            outline: none;
+          } 
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .main {
+    grid-template-columns: 550px;
+
+    .user {
+      grid-template-columns: 15% 30% 20% 30% 5%;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  body {
+    margin: 0;
+  }
+  .main {
+    grid-template-columns: 450px;
+
+    &__header {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    grid-template-columns: 320px;
+
+    .user {
+      grid-template-columns: 20% 25% 13% 29% 5%;
+    }
+  }
+}
+
